@@ -16,11 +16,9 @@ export default function MyApp() {
   );
 }
 
-function MyButton() {
-
-
+function MyButton({ count, onClick }) {
   return (
-    <button onClick={handleClick}>
+    <button onClick={onClick}>
       Clicked {count} times
     </button>
   );
