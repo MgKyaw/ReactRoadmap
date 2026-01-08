@@ -8,6 +8,11 @@ class Form extends Component {
     this.setState({
       name: newName
     });
+    // this.setState(prevState => {
+    //   return {
+    //     age: prevState.age + 1
+    //   };
+    // });
   }
 
   render() {
