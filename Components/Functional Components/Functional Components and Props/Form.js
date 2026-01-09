@@ -3,6 +3,19 @@ class Form extends Component {
     name: 'Taylor',
   };
 
+  static getDerivedStateFromProps(props, state) {
+    // Any time the current user changes,
+    // Reset any parts of state that are tied to that user.
+    // In this simple example, that's just the email.
+    if (props.userID !== state.prevUserID) {
+      return {
+        prevUserID: props.userID,
+        email: props.defaultEmail
+      };
+    }
+    return null;
+  }
+  
   handleNameChange = (e) => {
     const newName = e.target.value;
     this.setState({
