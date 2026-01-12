@@ -11,6 +11,7 @@
 // }
 
 // Step 2: Read props inside the child component 
+// function Avatar({ person, size = 100 }) {
 function Avatar(props) {
   let person = props.person;
   let size = props.size;
