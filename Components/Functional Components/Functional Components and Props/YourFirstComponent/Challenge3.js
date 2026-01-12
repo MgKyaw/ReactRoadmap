@@ -1,9 +1,33 @@
-function profile() {
+// function profile() {
+//   return (
+//     <img
+//       src="https://i.imgur.com/QIrZWGIs.jpg"
+//       alt="Alan L. Hart"
+//     />
+//   );
+// }
+
+// export default function Gallery() {
+//   return (
+//     <section>
+//       <h1>Amazing scientists</h1>
+//       <profile />
+//       <profile />
+//       <profile />
+//     </section>
+//   );
+// }
+
+// Solution code
+
+export function Profile() {
   return (
-    <img
-      src="https://i.imgur.com/QIrZWGIs.jpg"
-      alt="Alan L. Hart"
-    />
+    <>
+      <img
+        src="https://i.imgur.com/QIrZWGIs.jpg"
+        alt="Alan L. Hart"
+      />
+    </>
   );
 }
 
@@ -11,9 +35,9 @@ export default function Gallery() {
   return (
     <section>
       <h1>Amazing scientists</h1>
-      <profile />
-      <profile />
-      <profile />
+      <Profile />
+      <Profile />
+      <Profile />
     </section>
   );
 }
