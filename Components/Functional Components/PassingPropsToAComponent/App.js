@@ -12,6 +12,9 @@
 
 // Step 2: Read props inside the child component 
 function Avatar({ person, size}) {
+  let person = props.person;
+  let size = props.size;
+  
   return (
     <img
       className="avatar"
