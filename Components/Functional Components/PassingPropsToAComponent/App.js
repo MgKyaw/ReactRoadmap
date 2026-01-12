@@ -57,3 +57,13 @@ function Profile({ person, size, isSepia, thickBorder }) {
     </div>
   );
 }
+
+// To avoid repetitive code
+
+// function Profile(props) {
+//   return (
+//     <div className="card">
+//       <Avatar {...props} />
+//     </div>
+//   );
+// }
