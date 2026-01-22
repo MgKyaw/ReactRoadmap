@@ -1,4 +1,5 @@
 import { sculptureList } from './data.js';
+import { useState } from 'react';
 
 export default function Gallery() {
   let index = 0;
