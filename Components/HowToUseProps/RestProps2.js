@@ -20,4 +20,10 @@ const Button = ({ label, disabled, onClick }) => (
   </button>
 );
 
+// const Button = ({ label, onClick, ...others }) => (
+//   <button disabled={others.disabled} onClick={onClick}>
+//     {label}
+//   </button>
+// );
+
 export default App;
