@@ -1,3 +1,17 @@
+function updateFakeUserName(users, id, name) {
+  const updatedUsers = users.map((user) => {
+    if (user.id === id) {
+      return { id, name };
+    } else {
+      return user;
+    }
+  });
+
+  return new Promise((resolve) =>
+    setTimeout(() => resolve(updatedUsers), 1000)
+  );
+}
+
 function App() {
   const [users, setUsers] = React.useState([]);
 
@@ -11,17 +25,8 @@ function App() {
     fetchUsers();
   }, []);
 
-  function handleUpdateName(item, name) {
-    const newUsers = users.map((user) => {
-      if (user.id === item.id) {
-        return {
-          id: user.id,
-          name: name,
-        };
-      } else {
-        return user;
-      }
-    });
+  async function handleUpdateName(item, name) {
+    const newUsers = await updateFakeUserName(users, item.id, name);
 
     setUsers(newUsers);
   }
