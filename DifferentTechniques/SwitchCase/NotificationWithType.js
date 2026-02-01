@@ -1,0 +1,57 @@
+type Status = 'info' | 'warning' | 'error';
+
+type NotificationProps = {
+  text: string;
+  status: Status;
+};
+
+// function Notification({ text, status }: NotificationProps) {
+//   switch (status) {
+//     case 'info':
+//       return <Info text={text} />;
+//     case 'warning':
+//       return <Warning text={text} />;
+//     case 'error':
+//       return <Error text={text} />;
+//     default:
+//       return null;
+//   }
+// }
+
+// function Notification({ text, status }) {
+//   return (
+//     <div>
+//       {(function() {
+//         switch (status) {
+//           case 'info':
+//             return <Info text={text} />;
+//           case 'warning':
+//             return <Warning text={text} />;
+//           case 'error':
+//             return <Error text={text} />;
+//           default:
+//             return null;
+//         }
+//       })()}
+//     </div>
+//   );
+// }
+
+function Notification({ text, status }) {
+  return (
+    <div>
+      {(() => {
+        switch (status) {
+          case 'info':
+            return <Info text={text} />;
+          case 'warning':
+            return <Warning text={text} />;
+          case 'error':
+            return <Error text={text} />;
+          default:
+            return null;
+        }
+      })()}
+    </div>
+  );
+}
