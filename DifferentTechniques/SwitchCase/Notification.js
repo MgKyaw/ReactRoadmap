@@ -13,3 +13,16 @@ function Notification({ text, status }) {
 
   return null;
 }
+
+function Notification({ text, status }) {
+  switch (status) {
+    case 'info':
+      return <Info text={text} />;
+    case 'warning':
+      return <Warning text={text} />;
+    case 'error':
+      return <Error text={text} />;
+    default:
+      return null;
+  }
+}
