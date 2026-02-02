@@ -1,19 +1,33 @@
+// const NOTIFICATION_STATES = {
+//   info: 'Did you know? ...',
+//   warning: 'Be careful here ...',
+//   error: 'Something went wrong ...',
+// };
+
+// function Notification({ text, status }) {
+//   return (
+//     <div>
+//       {
+//         {
+//           info: <Info text={text} />,
+//           warning: <Warning text={text} />,
+//           error: <Error text={text} />,
+//         }[status]
+//       }
+//     </div>
+//   );
+// }
+
 const NOTIFICATION_STATES = {
-  info: 'Did you know? ...',
-  warning: 'Be careful here ...',
-  error: 'Something went wrong ...',
+  info: <Info />,
+  warning: <Warning />,
+  error: <Error />,
 };
 
-function Notification({ text, status }) {
+function Notification({ status }) {
   return (
     <div>
-      {
-        {
-          info: <Info text={text} />,
-          warning: <Warning text={text} />,
-          error: <Error text={text} />,
-        }[status]
-      }
+      {NOTIFICATION_STATES[status]}
     </div>
   );
 }
