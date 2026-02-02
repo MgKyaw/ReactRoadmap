@@ -24,10 +24,21 @@ const NOTIFICATION_STATES = {
   error: <Error />,
 };
 
-function Notification({ status }) {
-  return (
-    <div>
-      {NOTIFICATION_STATES[status]}
-    </div>
-  );
+// function Notification({ status }) {
+//   return (
+//     <div>
+//       {NOTIFICATION_STATES[status]}
+//     </div>
+//   );
+// }
+
+const getNotification = text => ({
+  info: <Info text={text} />,
+  warning: <Warning text={text} />,
+  error: <Error text={text} />,
+});
+
+function Notification({ status, text }) {
+  return <div>{getNotification(text)[status]}</div>;
 }
+
