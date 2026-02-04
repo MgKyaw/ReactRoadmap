@@ -1,5 +1,34 @@
 import { getImageUrl } from './utils.js';
 
+function Profile(props) {
+  return (
+    <section className="profile">
+        <h2>props.title</h2>
+        <img
+          className="avatar"
+          src={getImageUrl(props.imageUrl)}
+          alt={props.title}
+          width={70}
+          height={70}
+        />
+        <ul>
+          <li>
+            <b>Profession: </b> 
+            physicist and chemist
+          </li>
+          <li>
+            <b>Awards: 4 </b> 
+            (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)
+          </li>
+          <li>
+            <b>Discovered: </b>
+            polonium (chemical element)
+          </li>
+        </ul>
+      </section>
+  );
+}
+
 export default function Gallery() {
   return (
     <div>
