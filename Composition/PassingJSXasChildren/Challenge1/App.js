@@ -1,5 +1,36 @@
 import { getImageUrl } from './utils.js';
 
+function Profile(props) {
+  var count = props.Awards.length;
+  
+  return (
+    <section className="profile">
+        <h2>props.title</h2>
+        <img
+          className="avatar"
+          src={getImageUrl(props.imageUrl)}
+          alt={props.title}
+          width={70}
+          height={70}
+        />
+        <ul>
+          <li>
+            <b>Profession: </b> 
+            {props.Profession}
+          </li>
+          <li>
+            <b>Awards: { count} </b> 
+            ({props.Awards.join(',')})
+          </li>
+          <li>
+            <b>Discovered: </b>
+            {props.Discovered}
+          </li>
+        </ul>
+      </section>
+  );
+}
+
 export default function Gallery() {
   return (
     <div>
