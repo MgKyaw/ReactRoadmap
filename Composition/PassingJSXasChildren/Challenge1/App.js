@@ -1,6 +1,8 @@
 import { getImageUrl } from './utils.js';
 
 function Profile(props) {
+  var count = props.Awards.length;
+  
   return (
     <section className="profile">
         <h2>props.title</h2>
@@ -12,18 +14,18 @@ function Profile(props) {
           height={70}
         />
         <ul>
-          {/* <li>
+          <li>
             <b>Profession: </b> 
-            physicist and chemist
+            {props.Profession}
           </li>
           <li>
-            <b>Awards: 4 </b> 
-            (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)
+            <b>Awards: { count} </b> 
+            ({props.Awards.join(',')})
           </li>
           <li>
             <b>Discovered: </b>
-            polonium (chemical element)
-          </li> */}
+            {props.Discovered}
+          </li>
         </ul>
       </section>
   );
