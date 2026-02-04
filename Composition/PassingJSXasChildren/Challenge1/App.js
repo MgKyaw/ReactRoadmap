@@ -12,7 +12,7 @@ function Profile(props) {
           height={70}
         />
         <ul>
-          <li>
+          {/* <li>
             <b>Profession: </b> 
             physicist and chemist
           </li>
@@ -23,7 +23,7 @@ function Profile(props) {
           <li>
             <b>Discovered: </b>
             polonium (chemical element)
-          </li>
+          </li> */}
         </ul>
       </section>
   );
