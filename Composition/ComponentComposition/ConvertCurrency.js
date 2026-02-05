@@ -4,3 +4,8 @@ const convertCurrency = (amount, fromCurrency, toCurrency) => {
 
   return newAmount;
 };
+
+const convertCurrency2 = (amount, fromCurrency, toCurrency) => compose(
+    applyConversionRate(amount),
+    getConversionRate(fromCurrency, toCurrency),
+  );
