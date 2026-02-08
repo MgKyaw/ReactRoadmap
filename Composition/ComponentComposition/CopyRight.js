@@ -1,0 +1,1 @@
+const Copyright = ({ label }) => <div>Copyright by {label}</div>;
