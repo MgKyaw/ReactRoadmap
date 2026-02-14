@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { createConnection } from './chat.js';
+import { createConnection } from './Chat3.js';
 
 const serverUrl = 'https://localhost:1234';
 const roomId = 'general';
