@@ -11,3 +11,14 @@ class Button extends Component {
     );
   }
 }
+
+////
+class Button extends Component {
+  static defaultProps = {
+    color: 'blue'
+  };
+
+  render() {
+    return <button className={this.props.color}>click me</button>;
+  }
+}
