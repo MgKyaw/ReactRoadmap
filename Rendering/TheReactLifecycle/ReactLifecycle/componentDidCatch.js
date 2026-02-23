@@ -5,7 +5,6 @@ class MyComponent extends React.Component {
  }
 
  componentDidCatch(error, info) {
-  // Log the error to an error reporting service
   logErrorToMyService(error, info.componentStack);
  }
 
