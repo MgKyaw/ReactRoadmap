@@ -12,6 +12,8 @@
 
 // export default WeatherApp;
 
+// Use componentDidMount
+
 import React, { Component } from 'react';
 
 class WeatherApp extends Component {
