@@ -1,6 +1,10 @@
-const list = ['a', 'b', 'c'];
+const mylist = ['a', 'b', 'c'];
 
-const SimpleList = () => (
+const App = () => (
+  <SimpleList list={mylist} />
+);
+
+const SimpleList = ({ list }) => (
   <ul>
     {list.map(item => (
       <li key={item}>{item}</li>
