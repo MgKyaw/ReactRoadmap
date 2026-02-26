@@ -1,6 +1,8 @@
+const list = ['a', 'b', 'c'];
+
 const SimpleList = () => (
   <ul>
-    {['a', 'b', 'c'].map(function(item) {
+    {list.map(function(item) {
       return <li key={item}>{item}</li>;
     })}
   </ul>
