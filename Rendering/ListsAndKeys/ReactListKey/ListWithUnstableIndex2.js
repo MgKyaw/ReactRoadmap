@@ -26,3 +26,15 @@ const ListWithUnstableIndex = () => {
     </div>
   );
 };
+
+// Problem with unstable index
+
+// // the initially rendered list of items
+
+// [x] Learn React (index = 1)
+// [ ] Learn GraphQL (index = 2)
+
+// // becomes this after the reverse button click
+
+// [x] Learn GraphQL (index = 1)
+// [ ] Learn React (index = 2)
