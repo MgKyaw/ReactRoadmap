@@ -49,3 +49,7 @@ function Profile(props) {
     </div>
   );
 }
+
+<Card>
+  <Avatar />
+</Card>
