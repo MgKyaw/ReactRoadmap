@@ -1,4 +1,7 @@
-function Avatar({ person, size }) {
+function Avatar(props) {
+  let person = props.person;
+  let size = props.size;
+  
   return (
     <img
       className="avatar"
