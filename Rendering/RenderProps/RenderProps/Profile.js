@@ -20,11 +20,24 @@ function Avatar({ person, size = 100 }) {
 //   );
 // }
 
-export default function Profile() {
+// export default function Profile() {
+//   return (
+//     <Avatar
+//       person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
+//       size={100}
+//     />
+//   );
+// }
+
+function Profile({ person, size, isSepia, thickBorder }) {
   return (
-    <Avatar
-      person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
-      size={100}
-    />
+    <div className="card">
+      <Avatar
+        person={person}
+        size={size}
+        isSepia={isSepia}
+        thickBorder={thickBorder}
+      />
+    </div>
   );
 }
