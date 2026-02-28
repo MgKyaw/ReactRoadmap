@@ -41,3 +41,11 @@ function Profile({ person, size, isSepia, thickBorder }) {
     </div>
   );
 }
+
+function Profile(props) {
+  return (
+    <div className="card">
+      <Avatar {...props} />
+    </div>
+  );
+}
