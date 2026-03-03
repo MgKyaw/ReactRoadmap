@@ -23,3 +23,28 @@ export default function Profile() {
     />
   );
 }
+
+// import { getImageUrl } from './utils.js';
+
+// function Avatar({ person, size }) {
+//   let imageSize = size < 90 ? 's' : 'b';
+//   return (
+//     <img
+//       className="avatar"
+//       src={getImageUrl(person, imageSize)}
+//       alt={person.name}      
+//     />
+//   );
+// }
+
+// export default function Profile() {
+//   return (
+//     <Avatar
+//       size={90}
+//       person={{ 
+//         name: 'Gregorio Y. Zara', 
+//         imageId: '7vQD0fP'
+//       }}
+//     />
+//   );
+// }
