@@ -6,10 +6,21 @@ import React, { Component } from 'react';
 //   </div>
 // );
 
+// const App = () => (
+//   <Amount>
+//     <Pound amount={amount} />
+//     <Euro amount={amount} />
+//   </Amount>
+// );
+
 const App = () => (
   <Amount>
-    <Pound amount={amount} />
-    <Euro amount={amount} />
+    {() => (
+      <div>
+        <Pound amount={amount} />
+        <Euro amount={amount} />
+      </div>
+    )}
   </Amount>
 );
 
