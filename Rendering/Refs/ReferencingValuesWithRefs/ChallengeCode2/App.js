@@ -1,13 +1,28 @@
-import { useRef } from 'react';
+// import { useRef } from 'react';
+
+// export default function Toggle() {
+//   const isOnRef = useRef(false);
+
+//   return (
+//     <button onClick={() => {
+//       isOnRef.current = !isOnRef.current;
+//     }}>
+//       {isOnRef.current ? 'On' : 'Off'}
+//     </button>
+//   );
+// }
+
+//My solution code
+import { useState } from 'react';
 
 export default function Toggle() {
-  const isOnRef = useRef(false);
+  const [isOnRef, setIsOnRef] = useState(false);
 
   return (
     <button onClick={() => {
-      isOnRef.current = !isOnRef.current;
+      setIsOnRef(!isOnRef);
     }}>
-      {isOnRef.current ? 'On' : 'Off'}
+      {isOnRef ? 'On' : 'Off'}
     </button>
   );
 }
