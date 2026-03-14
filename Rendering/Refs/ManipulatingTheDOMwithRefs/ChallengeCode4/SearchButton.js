@@ -1,6 +1,15 @@
-export default function SearchButton() {
+// export default function SearchButton() {
+//   return (
+//     <button>
+//       Search
+//     </button>
+//   );
+// }
+
+// Solution Code
+export default function SearchButton({ onClick }) {
   return (
-    <button>
+    <button onClick={onClick}>
       Search
     </button>
   );
