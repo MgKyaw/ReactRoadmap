@@ -12,7 +12,7 @@
 //   );
 // }
 
-// // My Solution code
+// // Wrong my Solution code for the other challenge code
 
 // import { people } from './data.js';
 // import { getImageUrl } from './utils.js';
