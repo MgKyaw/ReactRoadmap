@@ -1,0 +1,1 @@
+<input onBeforeInput={e => console.log('onBeforeInput')} />
