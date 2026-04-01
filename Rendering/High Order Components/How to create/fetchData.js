@@ -10,13 +10,29 @@
 //   return <TodoList data={data} />;
 // };
 
+// const fetchData = () => {
+//   return { data: [] };
+// };
+
+// const App = () => {
+//   const { data } = fetchData();
+
+//   if (!data) return <div>No data loaded yet.</div>;
+//   if (!data.length) return <div>Data is empty.</div>;
+
+//   return <TodoList data={data} />;
+// };
+
+// Modify
+
 const fetchData = () => {
-  return { data: [] };
+  return { data: null, isLoading: true };
 };
 
 const App = () => {
-  const { data } = fetchData();
+  const { data, isLoading } = fetchData();
 
+  if (isLoading) return <div>Loading data.</div>;
   if (!data) return <div>No data loaded yet.</div>;
   if (!data.length) return <div>Data is empty.</div>;
 
