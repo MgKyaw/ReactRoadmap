@@ -1,7 +1,15 @@
-const multiply = (multiplier) => (multiplicand) =>
+// const multiply = (multiplier) => (multiplicand) =>
+//   multiplicand * multiplier;
+
+// const product = multiply(3)(4);
+
+// console.log(product);
+// // 12
+
+const multiply = (multiplier, multiplicand) =>
   multiplicand * multiplier;
 
-const product = multiply(3)(4);
+const product = multiply(3, 4);
 
 console.log(product);
 // 12
