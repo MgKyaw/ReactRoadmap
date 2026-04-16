@@ -8,6 +8,7 @@ export default function Form() {
     ref.current.focus();
     // This won't work because the DOM node isn't exposed:
     // ref.current.style.opacity = 0.5;
+    
   }
 
   return (
