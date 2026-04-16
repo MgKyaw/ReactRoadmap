@@ -4,16 +4,27 @@ import MyInput from './MyInput.js';
 export default function Form() {
   const ref = useRef(null);
 
-  function handleClick() {
-    ref.current.focus();
-    // This won't work because the DOM node isn't exposed:
-    // ref.current.style.opacity = 0.5;
-  }
+  const handleClick = () => {
+    if (ref.current) {
+      ref.current.focus();
+    }
+  };
+
+  const handleEdit = () => {
+    handleClick();
+  };
 
   return (
-    <form>
-      <MyInput placeholder="Enter your name" ref={ref} />
-      <button type="button" onClick={handleClick}>
+    <form onSubmit={(e) => e.preventDefault()}>
+      <MyInput 
+        placeholder="Enter your name" 
+        ref={ref} 
+      />
+      <button 
+        type="button" 
+        onClick={handleEdit}
+        aria-label="Edit input field"
+      >
         Edit
       </button>
     </form>
