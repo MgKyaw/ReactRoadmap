@@ -1,3 +1,9 @@
+//Only call Hooks at the top level 
+
+// Functions whose names start with use are called Hooks in React.
+
+// Don’t call Hooks inside loops, conditions, nested functions, or try/catch/finally blocks. 
+
 function Counter() {
   // ✅ Good: top-level in a function component
   const [count, setCount] = useState(0);
