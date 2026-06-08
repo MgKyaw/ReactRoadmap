@@ -6,3 +6,12 @@ const TextField =()=>{
       </>
   )
 }
+
+const App=()=>{
+  return (
+    <div className="inputs">
+      <TextField />
+      <TextField />
+    </div>
+  )
+}
