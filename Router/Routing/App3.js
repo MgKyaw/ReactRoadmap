@@ -3,16 +3,25 @@ function App() {
     <BrowserRouter>
       <nav style={{ margin: 10 }}>
         <NavLink
-          to='/'
+          to="/"
           style={({ isActive }) => ({
             padding: 5,
             ...(isActive ? { color: "red" } : {}),
           })}
         >
-            Home
-            </NavLink>
+          Home
+        </NavLink>
         <NavLink
-          to='/about'
+          to="/posts"
+          style={({ isActive }) => ({
+            padding: 5,
+            ...(isActive ? { color: "red" } : {}),
+          })}
+        >
+          Posts
+        </NavLink>
+        <NavLink
+          to="/about"
           style={({ isActive }) => ({
             padding: 5,
             ...(isActive ? { color: "red" } : {}),
@@ -21,6 +30,7 @@ function App() {
           About
         </NavLink>
       </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
