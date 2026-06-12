@@ -1,10 +1,11 @@
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Routes,
   Route,
   NavLink,
-  Outlet, 
-  Link } from 'react-router';
+  Outlet,
+  Link,
+  useParams } from 'react-router-dom';
 
 function Home() {
   return (
