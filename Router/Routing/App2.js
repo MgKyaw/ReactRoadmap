@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  NavLink,
+  Outlet, 
+  Link } from 'react-router';
 
 function Home() {
   return (
