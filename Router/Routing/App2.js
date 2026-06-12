@@ -1,4 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+  Outlet,
+  Link,
+  useParams } from 'react-router-dom';
 
 function Home() {
   return (
