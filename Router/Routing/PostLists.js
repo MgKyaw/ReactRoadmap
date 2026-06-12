@@ -3,7 +3,9 @@ function PostLists() {
     <ul>
       {Object.entries(BlogPosts).map(([slug, { title }]) => (
         <li key={slug}>
-          <h3>{title}</h3>
+          <Link to={`/posts/${slug}`}>
+            <h3>{title}</h3>
+          </Link>
         </li>
       ))}
     </ul>
