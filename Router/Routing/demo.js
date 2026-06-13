@@ -8,23 +8,23 @@ import {
   useParams,
 } from "react-router";
 
-interface Posts {
-  [key: string]: {
-    title: string;
-    description: string;
-  };
-}
+// interface Posts {
+//   [key: string]: {
+//     title: string;
+//     description: string;
+//   };
+// }
 
-const BlogPosts: Posts = {
-  "first-blog-post": {
-    title: "First Blog Post",
-    description: "Lorem ipsum dolor sit amet, consectetur adip.",
-  },
-  "second-blog-post": {
-    title: "Second Blog Post",
-    description: "Hello React Router v6",
-  },
-};
+// const BlogPosts: Posts = {
+//   "first-blog-post": {
+//     title: "First Blog Post",
+//     description: "Lorem ipsum dolor sit amet, consectetur adip.",
+//   },
+//   "second-blog-post": {
+//     title: "Second Blog Post",
+//     description: "Hello React Router v6",
+//   },
+// };
 
 function Home() {
   return (
