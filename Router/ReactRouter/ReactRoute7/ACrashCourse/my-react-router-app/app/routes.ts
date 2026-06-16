@@ -29,6 +29,10 @@ export default [
     route("login", "./auth/login.tsx"),
     route("register", "./auth/register.tsx"),
   ]),
+  route("dashboard", "./dashboard.tsx", [
+    index("./home.tsx"),
+    route("settings", "./settings.tsx"),
+  ]),
 
   ...prefix("concerts", [
     index("./concerts/home.tsx"),
