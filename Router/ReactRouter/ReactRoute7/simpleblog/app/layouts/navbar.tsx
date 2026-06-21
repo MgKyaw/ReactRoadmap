@@ -48,3 +48,49 @@
 //     </>
 //   );
 // }
+
+// app/routes/home.tsx
+import { Form, useOutletContext } from "react-router";
+
+type LoaderData = {
+  posts: Array<{ id: number; title: string }>;
+};
+
+export default function Home() {
+  const { posts } = useOutletContext<LoaderData>();
+
+  if (!posts.length) {
+    return (
+      <p className="text-gray-700">
+        <i>No posts</i>
+      </p>
+    );
+  }
+
+  return (
+    <ul className="space-y-2">
+      {posts.map((post) => (
+        <li
+          key={post.id}
+          className="flex items-center justify-between border border-gray-200 p-2 rounded"
+        >
+          <span className="font-medium">{post.title || <i>No Title</i>}</span>
+          <Form method="post" action={`posts/${post.id}/destroy`}>
+            <button
+              type="submit"
+              className="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-500 transition"
+              onClick={(e) => {
+                const response = confirm(
+                  "Are you sure you want to delete this post?"
+                );
+                if (!response) e.preventDefault();
+              }}
+            >
+              Delete
+            </button>
+          </Form>
+        </li>
+      ))}
+    </ul>
+  );
+}
