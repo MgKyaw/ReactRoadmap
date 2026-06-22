@@ -3,7 +3,7 @@ const App = () => {
   const [todos, dispatchTodos] = useReducer(todoReducer, initialTodos);
 
   const filteredTodos = todos.filter(todo => {
-    ...
+    // ...
   });
 
   return (
