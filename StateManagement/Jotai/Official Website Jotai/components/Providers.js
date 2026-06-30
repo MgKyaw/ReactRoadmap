@@ -1,4 +1,4 @@
-// ./components/providers.js
+// ./src/components/providers.js
 'use client'
 
 import { Provider } from 'jotai'
