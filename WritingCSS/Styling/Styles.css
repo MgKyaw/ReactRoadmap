@@ -36,10 +36,10 @@
 
   transition: all 0.1s ease-in;
 
-  &:hover {
+  /* &:hover {
     background: #1a202c;
     color: #ffffff;
-  }
+  } */
 }
 
 .button:hover {
