@@ -35,6 +35,11 @@
   background: transparent;
 
   transition: all 0.1s ease-in;
+
+  &:hover {
+    background: #1a202c;
+    color: #ffffff;
+  }
 }
 
 .button:hover {
