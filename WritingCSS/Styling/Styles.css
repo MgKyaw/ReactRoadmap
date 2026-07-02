@@ -13,3 +13,15 @@
   background: #1a202c;
   color: #ffffff;
 }
+
+.unordered-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
