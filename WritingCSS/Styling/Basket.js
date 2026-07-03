@@ -1,16 +1,12 @@
 function Basket({ items, onClick }) {
   return (
-    <ul className="unordered-list">
+    <ul>
       {items.map((item) => (
-        <li key={item.id} className="list-item">
+        <li key={item.id}>
           {item.name}
-          <button
-            type="button"
-            className="button"
-            onClick={() => onClick(item)}
-          >
+          <Button type="button" onClick={() => onClick(item)}>
             {item.isFavorite ? 'Unlike' : 'Like'}
-          </button>
+          </Button>
         </li>
       ))}
     </ul>
