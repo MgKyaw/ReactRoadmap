@@ -13,9 +13,9 @@ const App = () => {
     fetchData();
   }, [activeSearch]);
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(event.target.value);
-  };
+//   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+//     setSearch(event.target.value);
+//   };
 
   const handleSearchSubmit = () => {
     setActiveSearch(search);
