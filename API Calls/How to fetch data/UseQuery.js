@@ -57,3 +57,34 @@
 
 //   return { data, isLoading, isError };
 // };
+
+// const useQuery = <T>(...) => {
+//   ...
+
+//   useEffect(() => {
+//     let didCancel = false;
+
+//     const fetchData = async () => {
+//       setIsError(false);
+//       setIsLoading(true);
+
+//       try {
+//         const result = await queryFn();
+
+//         if (!didCancel) setData(result);
+//       } catch (error) {
+//         if (!didCancel) setIsError(true);
+//       }
+
+//       setIsLoading(false);
+//     };
+
+//     fetchData();
+
+//     return () => {
+//       didCancel = true;
+//     };
+//   }, [...queryKey]);
+
+//   return { data, isLoading, isError };
+// };
